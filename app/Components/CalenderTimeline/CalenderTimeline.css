@@ -1,0 +1,62 @@
+.schedule-container {
+    background: #EEEEEE;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: auto;
+    padding-left: 1rem;
+  }
+  
+  .appointment {
+    position: relative;
+  }
+  
+  .time {
+    position: absolute;
+    color: #aaa;
+    font-size: 0.8em;
+  }
+  
+  .top-time {
+    top: -10px;
+    left: 6px;
+  }
+  .current{
+    top:40%;
+    color: black;
+  }
+  .current::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    width: 1000%;
+    height: 1px;
+    background: rgb(165, 165, 165)
+  }
+  
+  .bottom-time {
+    bottom: -10px;
+    left: 10px;
+  }
+  
+  .details {
+    display: flex;
+    padding: 1rem;
+    margin-left: 60px; 
+  }
+  
+  
+  
+  .location {
+    color: #5f5f5f;
+  }
+  
+*::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  * {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }

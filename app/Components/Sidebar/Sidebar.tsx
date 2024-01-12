@@ -21,20 +21,20 @@ type SidebarProps = {
       onTabSelect(index); // Call the callback function when a tab is clicked
     };
   const classCustom =
-    " cursor-pointer flex p-3 border border-opacity-0 hover:border-opacity-100 border-white hover:bg-white transition-all hover:bg-opacity-50 rounded-2xl text-black";
+    ` cursor-pointer flex p-3 border border-opacity-0 hover:border-opacity-100 border-white hover:bg-white transition-all hover:bg-opacity-50 rounded-2xl text-black`;
 
   return (
-    <div className="sidebar w-full max-w-72">
+    <div className="sidebar mt-14 max-w-72">
       <ul className="tab-list flex flex-col gap-1 w-full">
         <TabItem
-          className={`${classCustom} ${activeTab === 0 ? "active" : ""}`}
-          onClick={() => handleTabClick(1)}
+          className={`${classCustom} opacity-100 ${activeTab === 0 ? "active" : ""}`}
+          onClick={() => handleTabClick(0)}
         >
           <span className="p-1 mr-2 opacity-50"><PlusIcon /></span>
           <span className=" flex items-center opacity-50">New Flow</span>
         </TabItem>
         <TabItem
-          className={`${classCustom} ${activeTab === 1 ? "active" : ""}`}
+          className={`${classCustom} opacity-100 ${activeTab === 1 ? "active" : ""}`}
           onClick={() => handleTabClick(1)}
         >
           <span className="p-1 mr-2"><MailIcon /></span>
@@ -42,7 +42,7 @@ type SidebarProps = {
           <span className=" flex items-center opacity-50">⋅ Marisa Lu</span>
         </TabItem>
         <TabItem
-          className={`${classCustom} ${activeTab === 2 ? "active" : ""}`}
+          className={`${classCustom} opacity-70 ${activeTab === 2 ? "active" : ""}`}
           onClick={() => handleTabClick(2)}
         >
           <span className="p-1 mr-2"><MailIcon /></span>
@@ -50,7 +50,7 @@ type SidebarProps = {
           <span className=" flex items-center opacity-50">⋅ Lindsey Weiss</span>
         </TabItem>
         <TabItem
-          className={`${classCustom} ${activeTab === 3 ? "active" : ""}`}
+          className={`${classCustom} opacity-50 ${activeTab === 3 ? "active" : ""}`}
           onClick={() => handleTabClick(3)}
         >
           <span className="p-1 mr-2"><MailIcon /></span>
@@ -58,32 +58,27 @@ type SidebarProps = {
           <span className=" flex items-center opacity-50">⋅ Evelyn Ma</span>
         </TabItem>
         <TabItem
-          className={`${classCustom} ${activeTab === 4 ? "active" : ""}`}
+          className={`${classCustom} opacity-30 ${activeTab === 4 ? "active" : ""}`}
           onClick={() => handleTabClick(4)}
         >
           <span className="p-1 mr-2"><MessengerIcon /></span>
           <span className="flex items-center">Victoria Wang</span>
         </TabItem>
         <TabItem
-          className={`${classCustom} ${activeTab === 5 ? "active" : ""}`}
+          className={`${classCustom} opacity-20 ${activeTab === 5 ? "active" : ""}`}
           onClick={() => handleTabClick(5)}
         >
           <span className="p-1 mr-2"><MessengerIcon /></span>
           <span className="flex items-center">Advait Kalakkad</span>
         </TabItem>
         <TabItem
-          className={`${classCustom} ${activeTab === 6 ? "active" : ""}`}
+          className={`${classCustom} opacity-10 ${activeTab === 6 ? "active" : ""}`}
           onClick={() => handleTabClick(6)}
         >
           <span className="p-1 mr-2"><XIcon /></span>
           <span className="flex items-center">Danny Trinh</span>
         </TabItem>
       </ul>
-      <div className="tab-content">
-        {activeTab === 0 && <p>Content for Tab 1</p>}
-        {activeTab === 1 && <p>Content for Tab 2</p>}
-        {activeTab === 2 && <p>Content for Tab 3</p>}
-      </div>
     </div>
   );
 };
@@ -92,6 +87,7 @@ export default Sidebar;
 
 const TabItem = styled.li`
   &.active {
+    opacity: 100%;
     background-color: #ffffff59;
     border: 1px solid #fff;
 
