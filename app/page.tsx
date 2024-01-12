@@ -31,82 +31,73 @@ export default function Home() {
               time="Just now"
               headText="Coffee?"
               headSpan="Mail from Marisa Lu"
-              children={
-                <div>
-                  <div className="text-3xl py-1">Marisa Lu</div>
-                  <div className="text-3xl py-1  font-semibold">Coffee?</div>
-                  <div className="text-lg">
-                    <br />
-                    Hey Jason, <br />
-                    Was wondering if you'd be interested in meeting my team at
-                    Philz Coffee at 11 AM today. No pressure if you can't make
-                    it, although I think you guys would really get along! <br />
-                    Marisa
-                  </div>
-                  <div className="border my-5" />
-                  <div className="buttonContainer  flex items-center">
-                    <Button text={"Reply"} />
-                    <Button text={"Forward"} />
-                    <Button text={"Delete"} />
-                  </div>
-                </div>
-              }
-            />
+            >                <div>
+            <div className="text-3xl py-1">Marisa Lu</div>
+            <div className="text-3xl py-1  font-semibold">Coffee?</div>
+            <div className="text-lg">
+              <br />
+              Hey Jason, <br />
+              Was wondering if you&apos;d be interested in meeting my team at
+              Philz Coffee at 11 AM today. No pressure if you can&apos;t make
+              it, although I think you guys would really get along! <br />
+              Marisa
+            </div>
+            <div className="border my-5" />
+            <div className="buttonContainer  flex items-center">
+              <Button text={"Reply"} />
+              <Button text={"Forward"} />
+              <Button text={"Delete"} />
+            </div>
+          </div></Card>
             <Card
               headText="See my availability: today"
-              children={
-                <div>
-                  <div className="text-3xl py-1  font-semibold">
-                    Available until 1 PM
-                  </div>
-                  <div className="text-lg">
-                    <br />
-                    <p>Would you like to create an event for</p>
-                    <p>Coffee with Marisa at 11 AM?</p>
-                    <br />
-                    <CalenderTimeline />
-                  </div>
-                  <div className="border my-5" />
-                  <div className="buttonContainer  flex items-center ">
-                    <Button text={"Create Event"} />
-                    <Button text={"Edit Event"} />
-                    <Button text={"Full Calender"} />
-                    <Button text={"Dismiss"} />
-                  </div>
-                </div>
-              }
-            />
+              ><div>
+              <div className="text-3xl py-1  font-semibold">
+                Available until 1 PM
+              </div>
+              <div className="text-lg">
+                <br />
+                <p>Would you like to create an event for</p>
+                <p>Coffee with Marisa at 11 AM?</p>
+                <br />
+                <CalenderTimeline />
+              </div>
+              <div className="border my-5" />
+              <div className="buttonContainer  flex items-center ">
+                <Button text={"Create Event"} />
+                <Button text={"Edit Event"} />
+                <Button text={"Full Calender"} />
+                <Button text={"Dismiss"} />
+              </div>
+            </div></Card>
             <Card
               icon={<Location className="opacity-60" />}
               headText="Philz Coffee"
               headSpan="Location"
-              children={
-                <div>
-                  <div className="-mx-8 -mt-8">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.2076586898751!2d-122.03511229244192!3d37.32283932572837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5adba96bc6f%3A0x4b1fa8f6a23445e7!2sPhilz%20Coffee!5e0!3m2!1sen!2sin!4v1705040231072!5m2!1sen!2sin" width="672" height="200" loading="lazy" ></iframe>
-                  </div>
-                  <div className="text-3xl py-1 mt-7 pb-3 font-semibold">
-                    Philz Coffee
-                  </div>
-                  <div className="text-xl font-medium">
-                    Custom-blended java in a casual setting.
-                  </div>
-                  <div className="text-lg text-gray-400">
-                    <br />
-                    <p>20686 Stevens Creek Blvd</p>
-                    <p>Cupertino, CA 95014</p>
-                    <br />
-                  </div>
-                  <div className="border my-5" />
-                  
-                  <div className="buttonContainer  flex items-center ">
-                    <Button icon={<Send className="opacity-60" />} text={"Get directions"} subtext="Requires your location" />
-                    <Button text={"See details"} />
-                    <Button text={"Find more cafés nearby"} />
-                  </div>
-                </div>
-              }
-            />
+              >                <div>
+              <div className="-mx-8 -mt-8">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.2076586898751!2d-122.03511229244192!3d37.32283932572837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5adba96bc6f%3A0x4b1fa8f6a23445e7!2sPhilz%20Coffee!5e0!3m2!1sen!2sin!4v1705040231072!5m2!1sen!2sin" width="672" height="200" loading="lazy" ></iframe>
+              </div>
+              <div className="text-3xl py-1 mt-7 pb-3 font-semibold">
+                Philz Coffee
+              </div>
+              <div className="text-xl font-medium">
+                Custom-blended java in a casual setting.
+              </div>
+              <div className="text-lg text-gray-400">
+                <br />
+                <p>20686 Stevens Creek Blvd</p>
+                <p>Cupertino, CA 95014</p>
+                <br />
+              </div>
+              <div className="border my-5" />
+              
+              <div className="buttonContainer  flex items-center ">
+                <Button icon={<Send className="opacity-60" />} text={"Get directions"} subtext="Requires your location" />
+                <Button text={"See details"} />
+                <Button text={"Find more cafés nearby"} />
+              </div>
+            </div></Card>
           </div></div>
         </div>
       </div>
